@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body,
+        h1,
+        h2{
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: rgb(218, 218, 218);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            font-size: 3rem;
+        }
+
+        .login{
+            background-color:rgb(238, 236, 236);
+            box-shadow: 4px 4px 10px black;
+            position: relative;
+            left: 40%;
+            width: 20%;
+            height: auto;
+            border: 1px solid black;
+            padding: 0;
+            margin: 3rem 0rem;
+        }
+
+        .login h2{
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        form{
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .login .inputform{
+            display: block;
+            padding: 10px 20px 10px 20px;
+        }
+
+        .login .inputform :nth-child(2){
+            text-align: left;
+        }
+
+        /*style for input form*/
+        .login .inputform label{
+            font-size: large;
+        }
+
+        .login .inputform input{
+            width: auto;
+            height: 28px;
+            font-size:large;
+
+        }
+
+        /*style for submit button*/
+        #submit{
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 10px;
+        }
+
+        #submit input{
+            width: 100px;
+            height: 36px;
+        }
+
+        #submit input:hover{
+            background-color: rgb(146, 145, 145);
+            color: white;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!--header start-->
+    <header>
+        <h1>Index2</h1>
+    </header>
+    <!--header end-->
+
+    <!--Login form start-->
+    <section class="login">
+        <h2>Login</h2>
+        <form action="" target="#">
+            <div class="inputform">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="name" required>
+            </div>
+            <div class="inputform">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="email" required>
+            </div>
+            <div class="inputform">
+                <label for="password">Password</label>
+                <input type="password" name="pass" id="password" placeholder="password" required>
+            </div>
+            <div class="inputform" id="submit">
+                <input type="submit">
+            </div> 
+        </form>
+    </section>
+    <!--Login form end-->
+
+</body>
+</html>

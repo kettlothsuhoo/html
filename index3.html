@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySelf</title>
+    <style>
+        /*style for text*/
+        /*--------------*/
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 500;
+            font-size: 24px;
+        }
+        header a{
+            font-size: 30px;
+            text-decoration: none;
+        }
+        .sectionHeader h3{
+            font-size: 30px;
+        }
+        nav a{
+            font-size: 28px;
+            text-decoration: none;
+        }
+
+        /*footer navigation style*/
+        #foot_nav a,
+        #foot p a,
+        #up_button a{
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+
+        /*style for position*/
+        /*------------------*/
+        body,h1{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: auto ;
+        }
+        .sectionHeader h3{
+            text-align: center;
+        }
+
+        /*up button style*/
+        #up_button{
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            left: 96%;
+            top: 680px;
+        }
+        #up_button a{
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: -12px;
+            text-align: center;
+        }
+
+        #photo .sectionPhoto img{
+            width: 150px;
+            height: 150px;
+            position: relative;
+            left: 50%;
+        }
+        #photo .sectionPhoto{
+            height: 250px;
+            background-image: url(/photo/8302-beluga.png);
+            background-repeat: no-repeat;
+        }
+
+        /*myself style test for all class*/
+        /*
+        #myself{
+            width: 90%;
+            height: auto;
+            margin: 40px auto;
+            padding: 0;
+        }
+        #myself .sectionHeader{
+            margin: 0px 10px;
+            padding: 10px 0px 0px 0px;
+        }
+        #myself .sectionHeader h3{
+            margin: 0px     0px;
+            padding: 10px 0px 0px 0px;
+        }
+        #myself .sectionFacts{
+            margin: 10px 100px;
+            padding: 10px 0px 20px 0px;
+        }
+        #myself .sectionFacts p{
+            margin: 0px 0px;
+            padding: 0;
+        }
+        */
+
+        /*sections style*/
+        section, article{
+            width: 90%;
+            height: auto;
+            margin: 100px auto;
+            padding: 0px;
+        }
+        .sectionHeader{
+            margin: 20px 0px 0px 0px;
+            padding: 10px 0px 0px 0px;
+        }
+        .sectionHeader h3{
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+        .sectionFacts{
+            margin: 0px 160px 0px 160px;
+            padding: 10px 0px 10px 0px;
+        }
+        .sectionFacts p{
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        /*navation style*/
+        #main_nav{
+            width: 100%;
+            height: 60px;
+            display: inline-table;
+        }
+        #main_nav a{
+            width: 20px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            padding: 5px 20px;
+        }
+        
+        /*footer style*/
+        #foot{
+            height: auto;
+        }
+        #foot p{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        
+        /*style for color and image*/
+        /*-------------------------*/
+        
+        /*styling color by group*/
+        body{
+            background-color:#ddd;
+        }
+        header{
+            background-color: darkgoldenrod;
+        }
+        #main_nav{
+            background-color: rgb(133, 133, 245);
+        }
+        article, section{
+            color: white;
+            background-color: #888888;
+            box-shadow: 8px 8px 8px #888888;
+        }
+        footer{
+            background-color: #888888;
+        }
+
+        /*styling color individually */
+        /*
+        #myself{
+            background-color: bisque;
+        }
+        #table{
+            background-color: azure;
+        }
+        #hobby{
+            background-color: aqua;
+        }
+        #food{
+            background-color: aquamarine;
+        }
+        #newest{
+            color: white;
+            background-color: brown;
+        }
+        footer{
+            background-color: chartreuse;
+        }
+        */
+
+        /*up button style*/
+        #up_button{
+            background-color: darkgoldenrod;
+            border-radius: 50%;
+        }
+        #up_button a{
+            color:white;
+        }
+        #up_button a:hover{
+            color: black;
+        }
+
+        /*header style*/
+        header a{
+            color: white;
+        }
+        
+        /*navigation style*/
+        #main_nav a{
+            color: white;
+        }
+        #main_nav a:hover{
+            color: black;
+            background-color: #ddd;
+        }
+
+        /*footer navigatio style*/
+        #foot p a{
+            color: black;
+        }
+        #foot_table a{
+            color: white;
+        }
+        #foot_table a:hover{
+            color: black;
+        }
+        #foot p a:hover{
+            color: white;
+        }
+    
+
+        /*style for table*/
+        /*---------------*/
+        #table{
+            table-layout: auto;
+            border: 2px solid red;
+            box-shadow: 5px 5px 10px red;
+            font-weight: 600;
+            margin: 20px auto;
+        }
+        #table td{
+            font-size: 28px;
+            border: 1px solid blue;
+            width: 140px;
+            height: 60px;
+            text-align: center;   
+        }
+        #table .td_red{
+            color: white;
+            background-color: blue;
+        }
+        #table td:hover{
+            color: white;
+            border: 1px solid red;
+            background-color: red;
+        }
+        #table tr:first-child td:hover{
+            color: black;
+            border: 1px solid greenyellow;
+            background-color: greenyellow;
+        }
+        #table tr td:first-child:hover{
+            color: black;
+            border: 1px solid yellow;
+            background-color: yellow;
+        }
+
+
+        /*style for footer table*/
+        /*----------------------*/
+        #foot_table{
+            margin: 0px auto;
+            font-size: 20px;
+        }
+        #foot_table td{
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--sticky button start-->
+    <div id="up_button">
+        <a href="#"><p>Up</p></a>
+    </div>
+    <!--sticky button end-->
+
+    <!--title start-->
+    <header>
+        <a href="#"><h1>Simple Web</h1></a>
+    </header>
+    <!--title end-->
+
+    <!--nav start-->
+    <nav id="main_nav">
+        <a href="/pdf/developer_preview.pdf">book</a>
+        <a href="#myself">MySelf</a>
+        <a href="#table">Table</a>
+        <a href="#hobby">Hobby</a>
+        <a href="#food">Food</a>
+        <a href="#newest">Newest</a>
+    </nav>
+    <!--nav end-->
+
+    <!--article about myself start-->
+    <article id="myself">
+        <div class="sectionHeader">
+          <h3>MySelf</h3>  
+        </div>
+        <div class="sectionFacts">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum adipisci nulla voluptates at modi quo voluptatibus soluta aut excepturi voluptatum ipsam voluptas quae, ducimus beatae hic cum temporibus, maiores quis?</p> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi amet debitis, illum dolores quaerat fugiat asperiores alias cupiditate repudiandae beatae numquam, quae possimus commodi voluptatum labore, vitae porro nostrum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cumque maxime voluptate tenetur pariatur sunt officia nihil, quibusdam, vel numquam aliquid illo iste quisquam? A accusamus voluptatibus dolor modi aliquid!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, numquam incidunt. Delectus minima, ut aspernatur aliquid eos accusantium fugiat, quia sint animi ex reprehenderit est, modi aliquam impedit laudantium totam.</p>
+        </div>
+    </article>
+    <!--article about myself end-->
+
+    <!--photo section start-->
+    <section id="photo">
+        <div class="sectionPhoto">
+            <img src="/photo/8302-beluga.png" alt="beluga" height="100px" width="100px">
+            <img src="/photo/artworks-000476209113-kso4zy-t500x50 
+            0.jpg" alt="evilmorty">
+        </div>
+    </section>
+    <!--photo section start-->
+
+    <!--table for weeks start-->
+    <table id="table">
+        <tr>
+            <td><br></td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td><td>Saturday</td><td>Sunday</td>
+        </tr>
+        <tr>
+            <td>Morning</td><td class="td_red">Home</td><td>Read</td><td>Read</td><td>Play</td><td class="td_red">Program</td><td>Program</td><td>Play</td>
+        </tr>
+        <tr>
+            <td>Afternoon</td><td>Go</td><td class="td_red">Go</td><td>Go</td><td>Go</td><td>Go</td><td class="td_red"  >Go</td><td>Go</td>
+        </tr>
+        <tr>
+            <td>Evening</td><td>Go</td><td>Go</td><td class="td_red">Go</td><td>Go</td><td>Go</td><td>Go</td><td>Go</td>
+        </tr>
+        <tr>
+            <td>Night</td><td>Go</td><td>Go</td><td>Go</td><td class="td_red">Go</td><td>Go</td><td>Go</td><td>Go</td>
+        </tr>
+    </table>
+    <!--table for weeks end-->
+
+    <!--hobby section start-->
+    <section id="hobby">
+        <div class="sectionHeader">
+            <h3>Hobby</h3>
+        </div>
+        <div class="sectionFacts">
+            <p>Hi</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum adipisci nulla voluptates at modi quo voluptatibus soluta aut excepturi voluptatum ipsam voluptas quae, ducimus beatae hic cum temporibus, maiores quis?</p> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi amet debitis, illum dolores quaerat fugiat asperiores alias cupiditate repudiandae beatae numquam, quae possimus commodi voluptatum labore, vitae porro nostrum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cumque maxime voluptate tenetur pariatur sunt officia nihil, quibusdam, vel numquam aliquid illo iste quisquam? A accusamus voluptatibus dolor modi aliquid!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, numquam incidunt. Delectus minima, ut aspernatur aliquid eos accusantium fugiat, quia sint animi ex reprehenderit est, modi aliquam impedit laudantium totam.</p>
+        </div>
+    </section>
+    <!--hobby section end-->
+
+    <!--food section start-->
+    <section id="food">
+        <div class="sectionHeader">
+            <h3>Food</h3>
+        </div>
+        <div class="sectionFacts">
+            <p>Hey</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum adipisci nulla voluptates at modi quo voluptatibus soluta aut excepturi voluptatum ipsam voluptas quae, ducimus beatae hic cum temporibus, maiores quis?</p> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi amet debitis, illum dolores quaerat fugiat asperiores alias cupiditate repudiandae beatae numquam, quae possimus commodi voluptatum labore, vitae porro nostrum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cumque maxime voluptate tenetur pariatur sunt officia nihil, quibusdam, vel numquam aliquid illo iste quisquam? A accusamus voluptatibus dolor modi aliquid!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, numquam incidunt. Delectus minima, ut aspernatur aliquid eos accusantium fugiat, quia sint animi ex reprehenderit est, modi aliquam impedit laudantium totam.</p>
+        </div>
+    </section>
+    <!--food section end-->
+
+    <!--newest things start-->
+    <section id="newest">
+        <div class="sectionHeader">
+            <h3>Newest Things</h3>
+        </div>
+        <div class="sectionFacts">
+            <p>Yooo</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum adipisci nulla voluptates at modi quo voluptatibus soluta aut excepturi voluptatum ipsam voluptas quae, ducimus beatae hic cum temporibus, maiores quis?</p> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi amet debitis, illum dolores quaerat fugiat asperiores alias cupiditate repudiandae beatae numquam, quae possimus commodi voluptatum labore, vitae porro nostrum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cumque maxime voluptate tenetur pariatur sunt officia nihil, quibusdam, vel numquam aliquid illo iste quisquam? A accusamus voluptatibus dolor modi aliquid!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, numquam incidunt. Delectus minima, ut aspernatur aliquid eos accusantium fugiat, quia sint animi ex reprehenderit est, modi aliquam impedit laudantium totam.</p>
+        </div>
+    </section>
+    <!--newest things end-->
+
+    <!--footer start-->
+    <footer>
+        <div id="foot">
+            <nav id="foot_nav">
+                <table id="foot_table">
+                    <tr><th>Link</th><th>Language</th><th>Contact us</th></tr>
+                    <tr> <td><a href="#">Home</a></td> <td><a href="#">Html</a></td> <td><a href="tel:0123456789">0123456789</a></td> </tr>
+                    <tr> <td><a href="#myself">MySelf</a></td> <td><a href="#">Css</a></td> <td><a href="maung@gmail.com">maung@gmail.com</a></td> </tr>
+                    <tr> <td><a href="#table">Table</a></td> <td><a href="#">Javascript</a></td> <td><a href="#">mg@gmail</a></td> </tr>
+                    <tr> <td><a href="#hobby">Hobby</a></td> <td><br></td> <td><a href="#">0987654321</a></td> </tr>
+                    <tr> <td><a href="#food">Food</a></td> </tr>
+                    <tr> <td><a href="#newest">Newest</a></td> </tr>
+                </table>
+            </nav>
+            
+            <p>Powerend by <a href="#">JoY</a></p>
+        </div>
+    </footer>
+    <!--footer end-->
+</body>
+</html>
